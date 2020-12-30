@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 1001bc62adaa0451cb40206853391b06, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -2354,6 +2354,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4c3bca59f026564c82a451cce1629d4, type: 3}
+--- !u!1 &83502808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 470339420}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2145373387}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &83555471 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: be6ab1993fcf73a49a5cb9b87aff0a9e,
@@ -21834,6 +21850,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: cliff_large_stone
       objectReference: {fileID: 0}
+    - target: {fileID: 6991940423149565973, guid: 7088e04bcd5384c4591c19ecfebe4b4e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -6126091556477775235, guid: f1df72569de0d91449ddc90df7dab6e7,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7088e04bcd5384c4591c19ecfebe4b4e, type: 3}
 --- !u!4 &854731089 stripped
@@ -21987,7 +22009,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1922384967}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!199 &858865158
 ParticleSystemRenderer:
@@ -41303,12 +41325,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 21000772}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1458732843 stripped
+--- !u!4 &1458732843
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 308b0898a38daa748beb128354df0a9e,
     type: 3}
   m_PrefabInstance: {fileID: 1790438887}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776975122}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1926974295}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1461315710 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 63241e3b717db6343bf0c5907ffa65a3,
@@ -48213,6 +48244,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b219f99d7be8c14d9ad64c29f0960c8, type: 3}
+--- !u!1 &1776975122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1790438887}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1458732843}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1779702159 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4752886935391618980, guid: 4ec0aabe37977064b8ac50476daef502,
@@ -51326,11 +51373,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1458732843}
-  - {fileID: 2145373387}
-  - {fileID: 279038047}
+  - {fileID: 2035887390}
   - {fileID: 858865157}
+  - {fileID: 279038047}
   - {fileID: 2018431609}
+  - {fileID: 1926974295}
   - {fileID: 1567923765}
   - {fileID: 1251337638}
   m_Father: {fileID: 65128458}
@@ -51638,6 +51685,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 547719538949060585, guid: ad33e514872d3f145bf903118d1ce696, type: 3}
+--- !u!1 &1926974294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1790438887}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1926974295}
+  m_Layer: 0
+  m_Name: Sail ship (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1926974295
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1790438887}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926974294}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1458732843}
+  m_Father: {fileID: 1922384967}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1930382798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53630,7 +53708,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1922384967}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!199 &2018431610
 ParticleSystemRenderer:
@@ -58667,6 +58745,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be6ab1993fcf73a49a5cb9b87aff0a9e, type: 3}
+--- !u!1 &2035887389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 470339420}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2035887390}
+  m_Layer: 0
+  m_Name: BoatWSail (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2035887390
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 470339420}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035887389}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2145373387}
+  m_Father: {fileID: 1922384967}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2038362226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58922,6 +59031,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: cliff_top_stone (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 8935717906416659762, guid: 63241e3b717db6343bf0c5907ffa65a3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: -6126091556477775235, guid: bbfab54848d374b4993444d3944eaa43,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63241e3b717db6343bf0c5907ffa65a3, type: 3}
 --- !u!1 &2046985544 stripped
@@ -62063,12 +62178,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145335518}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &2145373387 stripped
+--- !u!4 &2145373387
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 87b1db402950ce041bdf432d94cca622,
     type: 3}
   m_PrefabInstance: {fileID: 470339420}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83502808}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2035887390}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2147056113 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6641f0921194bc7489abd63425b38c3b,
