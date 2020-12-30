@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/HelloVR.unity
     guid: 377bc3c617920bb48965657ff3ebb975
-  - enabled: 1
-    path: Assets/Scenes/Apartment.unity
-    guid: acdf70db61d6e704faf832aa878586b9
+  - enabled: 0
+    path: Assets/Scenes/TreeTestingFacility.unity
+    guid: 60f2becd690e66749b941825277a313d
   m_configObjects: {}
