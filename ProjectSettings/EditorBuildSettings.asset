@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/HelloVR.unity
+    path: Assets/Scenes/GoogleVRScene.unity
     guid: 377bc3c617920bb48965657ff3ebb975
   - enabled: 0
     path: Assets/Scenes/TreeTestingFacility.unity
