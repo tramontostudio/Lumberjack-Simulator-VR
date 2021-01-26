@@ -1,0 +1,113 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Settings : MonoBehaviour
+{
+    public int treeCount = 5;
+    public int cut1Count = 5;
+    public int cut2Count = 5;
+
+    public Button treeCountBtn;
+    public Button cut1CountBtn;
+    public Button cut2CountBtn;
+
+    private string treeCountTxt;
+    private string cut1CountTxt;
+    private string cut2CountTxt;
+    public int cuttedTrees = 0;
+    public GameObject pointer;
+    public Text winTxt;
+    public GameObject winCanvas;
+
+    private DateTime startTime;
+    private bool notYetWin = true;
+    public GameObject PlayerHead;
+    public bool updated = false;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        treeCountTxt = treeCountBtn.GetComponentInChildren<Text>().text;
+        cut1CountTxt = cut1CountBtn.GetComponentInChildren<Text>().text;
+        cut2CountTxt = cut2CountBtn.GetComponentInChildren<Text>().text;
+
+        treeCountBtn.GetComponentInChildren<Text>().text = treeCountTxt + treeCount;
+        cut1CountBtn.GetComponentInChildren<Text>().text = cut1CountTxt + cut1Count;
+        cut2CountBtn.GetComponentInChildren<Text>().text = cut2CountTxt + cut2Count;
+        winCanvas.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(cuttedTrees>=treeCount && notYetWin && updated)
+        {
+            notYetWin = false;
+            DateTime endTime = DateTime.Now;
+            endTime.Subtract(startTime);
+            
+            pointer.SetActive(true);
+            winCanvas.SetActive(true);
+
+            winTxt.text = "Gratulacje! Wycięto " + cuttedTrees + " drzew, w czasie " + endTime.Second + " sekund !";
+        }
+    }
+
+    public void TreeCountAdd()
+    {
+        treeCount++;
+        treeCountBtn.GetComponentInChildren<Text>().text = treeCountTxt + treeCount;
+    }
+
+    public void TreeCountSubtract()
+    {
+        treeCount--;
+        treeCountBtn.GetComponentInChildren<Text>().text = treeCountTxt + treeCount;
+    }
+
+    public void Cut1Add()
+    {
+        cut1Count++;
+        cut1CountBtn.GetComponentInChildren<Text>().text = cut1CountTxt + cut1Count;
+    }           
+                
+    public void Cut1Subtract()
+    {
+        cut1Count--;
+        cut1CountBtn.GetComponentInChildren<Text>().text = cut1CountTxt + cut1Count;
+    }
+
+    public void Cut2Add()
+    {
+        cut2Count++;
+        cut2CountBtn.GetComponentInChildren<Text>().text = cut2CountTxt + cut2Count;
+    }
+
+    public void Cut2Subtract()
+    {
+        cut2Count--;
+        cut2CountBtn.GetComponentInChildren<Text>().text = cut2CountTxt + cut2Count;
+    }
+
+    public void ZapiszPressed()
+    {
+        pointer.SetActive(false);
+        startTime = DateTime.Now;
+        updated = true;
+    }
+
+    public void ZakonczPressed()
+    {
+#if UNITY_EDITOR
+        // Application.Quit() does not work in the editor so
+        // UnityEditor.EditorApplication.isPlaying need to be set to false to end the game
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+         Application.Quit();
+#endif
+    }
+
+}
