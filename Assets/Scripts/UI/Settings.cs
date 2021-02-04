@@ -9,6 +9,7 @@ public class Settings : MonoBehaviour
     public int treeCount = 5;
     public int cut1Count = 5;
     public int cut2Count = 5;
+    public int maxTrees = 12, maxCut1 = 20, maxCut2 = 20;
 
     public Button treeCountBtn;
     public Button cut1CountBtn;
@@ -22,7 +23,7 @@ public class Settings : MonoBehaviour
     public Text winTxt;
     public GameObject winCanvas;
 
-    private DateTime startTime;
+    public DateTime startTime;
     private bool notYetWin = true;
     public GameObject PlayerHead;
     public bool updated = false;
@@ -52,44 +53,62 @@ public class Settings : MonoBehaviour
             pointer.SetActive(true);
             winCanvas.SetActive(true);
 
-            winTxt.text = "Gratulacje! Wycięto " + cuttedTrees + " drzew, w czasie " + endTime.Second + " sekund !";
+            winTxt.text = "Gratulacje! Wycięto " + cuttedTrees + " drzew!";
         }
     }
 
     public void TreeCountAdd()
     {
-        treeCount++;
-        treeCountBtn.GetComponentInChildren<Text>().text = treeCountTxt + treeCount;
+        if (treeCount < maxTrees)
+        {
+            treeCount++;
+            treeCountBtn.GetComponentInChildren<Text>().text = treeCountTxt + treeCount;
+        }
     }
 
     public void TreeCountSubtract()
     {
-        treeCount--;
-        treeCountBtn.GetComponentInChildren<Text>().text = treeCountTxt + treeCount;
+        if (treeCount > 1)
+        {
+            treeCount--;
+            treeCountBtn.GetComponentInChildren<Text>().text = treeCountTxt + treeCount;
+        }
     }
 
     public void Cut1Add()
     {
-        cut1Count++;
-        cut1CountBtn.GetComponentInChildren<Text>().text = cut1CountTxt + cut1Count;
+        if (cut1Count < maxCut1)
+        {
+            cut1Count++;
+            cut1CountBtn.GetComponentInChildren<Text>().text = cut1CountTxt + cut1Count;
+        }
     }           
                 
     public void Cut1Subtract()
     {
-        cut1Count--;
-        cut1CountBtn.GetComponentInChildren<Text>().text = cut1CountTxt + cut1Count;
+        if (cut1Count > 1)
+        {
+            cut1Count--;
+            cut1CountBtn.GetComponentInChildren<Text>().text = cut1CountTxt + cut1Count;
+        }
     }
 
     public void Cut2Add()
     {
-        cut2Count++;
-        cut2CountBtn.GetComponentInChildren<Text>().text = cut2CountTxt + cut2Count;
+        if (cut2Count < maxCut2)
+        {
+            cut2Count++;
+            cut2CountBtn.GetComponentInChildren<Text>().text = cut2CountTxt + cut2Count;
+        }
     }
 
     public void Cut2Subtract()
     {
-        cut2Count--;
-        cut2CountBtn.GetComponentInChildren<Text>().text = cut2CountTxt + cut2Count;
+        if (cut2Count > 1)
+        {
+            cut2Count--;
+            cut2CountBtn.GetComponentInChildren<Text>().text = cut2CountTxt + cut2Count;
+        }
     }
 
     public void ZapiszPressed()
