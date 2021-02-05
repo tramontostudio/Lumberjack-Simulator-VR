@@ -105,7 +105,9 @@ public class treeController : MonoBehaviour
 
     private void TreeFall()
     {
-        rigidbodyComponent.constraints = RigidbodyConstraints.FreezeRotationZ;
+        //rigidbodyComponent.constraints = RigidbodyConstraints.FreezeRotationZ;
+        rigidbodyComponent.isKinematic = false;
+        //rigidbodyComponent.AddForceAtPosition(new Vector3(0.0f, 1.0f, 0.0f), new Vector3(0.0f, 1.0f, 0.0f));
         settings.cuttedTrees++;
     }
 
