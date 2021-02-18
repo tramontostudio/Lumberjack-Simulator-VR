@@ -45033,6 +45033,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2027403169}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1317576577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1758032441667863418, guid: 7894b3a043311364eba2de0f208ab7c3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1758032440869505140}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1317576578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317576577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7be892badb08354fb8bc034fa91dccb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1317750321 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ad33e514872d3f145bf903118d1ce696,
@@ -49097,8 +49115,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1440217657}
   - component: {fileID: 1440217661}
-  - component: {fileID: 1440217660}
-  - component: {fileID: 1440217659}
   - component: {fileID: 1440217658}
   m_Layer: 0
   m_Name: AxeSpawner
@@ -49106,7 +49122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1440217657
 Transform:
   m_ObjectHideFlags: 0
@@ -49136,58 +49152,6 @@ MonoBehaviour:
   _count: 0
   AxePrefab: {fileID: 1758032441667863418, guid: 7894b3a043311364eba2de0f208ab7c3,
     type: 3}
---- !u!65 &1440217659
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440217656}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1440217660
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440217656}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!33 &1440217661
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -73884,10 +73848,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 57.647995
       objectReference: {fileID: 0}
+    - target: {fileID: 1758032441667863399, guid: 7894b3a043311364eba2de0f208ab7c3,
+        type: 3}
+      propertyPath: onDetachFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1440217658}
     - target: {fileID: 1758032441667863418, guid: 7894b3a043311364eba2de0f208ab7c3,
         type: 3}
       propertyPath: m_Name
       value: Axe
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1758032441667863419, guid: 7894b3a043311364eba2de0f208ab7c3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7894b3a043311364eba2de0f208ab7c3, type: 3}

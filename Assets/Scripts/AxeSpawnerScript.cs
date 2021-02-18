@@ -10,7 +10,7 @@ public class AxeSpawnerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SpawnNewAxe();
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class AxeSpawnerScript : MonoBehaviour
         if(other.gameObject.layer == LayerMask.NameToLayer("Axe"))
         {
             _count--;
-            SpawnNewAxe();
+            //SpawnNewAxe();
         }
     }
 
@@ -40,7 +40,13 @@ public class AxeSpawnerScript : MonoBehaviour
         if (_count < 1000)
         {
             GameObject object1 = Instantiate(AxePrefab, transform.position, transform.rotation);
-            axeList.Add(object1);
+            //axeList.Add(object1);
         }
     }
+
+    public void AxeDetached()
+    {
+        SpawnNewAxe();
+    }
+
 }
