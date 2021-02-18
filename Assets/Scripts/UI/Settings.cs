@@ -27,6 +27,7 @@ public class Settings : MonoBehaviour
     private bool notYetWin = true;
     public GameObject PlayerHead;
     public bool updated = false;
+    public Button zapiszBtn;
 
     // Start is called before the first frame update
     void Start()
@@ -116,6 +117,7 @@ public class Settings : MonoBehaviour
         pointer.SetActive(false);
         startTime = DateTime.Now;
         updated = true;
+        zapiszBtn.GetComponentInChildren<Text>().text = "Zapisano!";
     }
 
     public void ZakonczPressed()

@@ -20,6 +20,11 @@ public class CutCollision : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        rootTreeController.RegisterCut(gameObject, other, 1.0f);
+        rootTreeController.RegisterCut(gameObject, other, 1.0f, true);
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        rootTreeController.RegisterCut(gameObject, other, 1.0f, false);
     }
 }
